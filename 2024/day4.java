@@ -133,5 +133,42 @@ public class day4 {
         }
 
         System.out.println("Answer part one: " + xmasCounter);
+
+        //part two:
+        xmasCounter = 0;
+
+        for(int i = 0; i < readData.size(); i++){
+            for(int j = 0; j < readData.get(i).length(); j++){
+                //check top
+                canCheck[0] = (i < 1) ? false : true;
+                //check bottom
+                canCheck[1] = (i + 2 > readData.size()) ? false : true;
+                //check left
+                canCheck[2] = (j < 1) ? false : true;
+                //check right
+                canCheck[3] = (j + 2 > readData.get(i).length()) ? false : true;
+
+                String check = "MAS";
+                String checkTwo = "SAM";
+                
+                if(canCheck[0] && canCheck[1] && canCheck[2] && canCheck[3]){
+                    String[] makeReadable = new String[3];
+                    String[] toCheck = new String[2];
+                    for(int k = 0; k < 3; k++){
+                        makeReadable[k] = readData.get(i-1+k).substring(j-1+k,j-1+k+1);
+                    }
+                    toCheck[0] = makeReadable[0] + makeReadable[1] + makeReadable[2];
+                    for(int k = 0; k < 3; k++){
+                        makeReadable[k] = readData.get(i+1-k).substring(j-1+k,j-1+k+1);
+                    }
+                    toCheck[1] = makeReadable[0] + makeReadable[1] + makeReadable[2];
+                    if((check.equals(toCheck[0]) || checkTwo.equals(toCheck[0])) && (check.equals(toCheck[1]) || checkTwo.equals(toCheck[1]))){
+                        xmasCounter++;
+                    }
+                }
+            }
+        }
+
+        System.out.println("Answer part two: " + xmasCounter);
     }
 }

@@ -1,10 +1,10 @@
 import java.io.*;
 import java.util.ArrayList;
 
-class dayTwo{
+class day2{
     public static void main(String[] args) throws Exception{
         
-        File file = new File("input/dayTwo.txt");
+        File file = new File("input/day2.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
 
         ArrayList<int[]> levelslList = new ArrayList<int[]>();

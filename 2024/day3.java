@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class dayThree {
+public class day3 {
     public static void main(String[] args) throws Exception{
-        File file = new File("input/dayThree.txt");
+        File file = new File("input/day3.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
 
         ArrayList<String> readData = new ArrayList<String>();

@@ -2,13 +2,13 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
-class dayOne{
+class day1{
     public static void main(String[] args) throws Exception{
         ArrayList<Integer> leftNumbers = new ArrayList<Integer>();
         ArrayList<Integer> rightNumbers = new ArrayList<Integer>();
 
         try{
-            File file = new File("input/dayOne.txt");
+            File file = new File("input/day1.txt");
             BufferedReader br = new BufferedReader(new FileReader(file));
 
             String readLine;
